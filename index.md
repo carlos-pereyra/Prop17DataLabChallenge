@@ -1,6 +1,5 @@
 ---
 layout: default
-title: Home
 ---
 
 ## Major Parolee Populations within California
