@@ -12,3 +12,4 @@ This illustration does not represent the entire parolee population by county map
 The color scheme represents majority partisan party, red and blue colors are associated with the republican and democratic parties respectively.
 
 ## Parole Violations and employment opportunities
+Coming soon!
