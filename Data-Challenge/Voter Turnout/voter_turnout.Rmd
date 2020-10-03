@@ -1,0 +1,136 @@
+---
+title: "Voter Turnout Before and After Parolee Enfranchisement"
+author: "Evan Roybal"
+date: "9/28/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Due to limited data on the timeline of which states enfranchised parolees and many states only recently enfranchiseing parolees there will only be three states being represented in the data as a result of them being able to provide at least one year where parolees were allowed to vote. As such, the conclusions drawn from the data should not be considered completely reliable.
+
+#loading packages contained in tidyverse
+```{r}
+library(tidyverse)
+library(here)
+```
+
+#reading in Rhode Island .csv containing election turnout data
+```{r}
+# ri = Rhode Island
+# vt = voter turnout
+ri_vt <- read.csv(here('Voter Turnout', 'Raw Data', 'history-of-voter-turnout.csv'))
+ri_vt <- rename(ri_vt, Year = ï..Category)
+```
+
+#Preliminary Graphing of ri_vt to understand the data
+```{r}
+ri_vt_graph_test <- ggplot(data = ri_vt, aes(x = Year, y = Voted)) +
+  geom_point() +
+  geom_vline(aes(xintercept = 2006), color = "yellow") +
+  geom_vline(aes(xintercept = 2007), color = "green") +
+  theme_light() +
+  geom_line() +
+  labs(y = "# of Votes", x = "Election Year", title = "Voter Turnout in Rhode Island", subtitle = "Data from Rhode Island Department of State")
+ri_vt_graph_test
+```
+
+#Running ANOVA to determine if any statistical significance exists
+```{r}
+#Voter turnout before enfranchisement of felons
+ri_vt_before <- ri_vt %>%
+  filter(Year <= 2006)
+summary(ri_vt_before)
+ri_vt_before_nrow <- nrow(ri_vt_before)
+ri_vt_before_sd <- sd(ri_vt_before$Voted)
+ri_vt_before_mean <- mean(ri_vt_before$Voted)
+#Voter turnout after enfranchisement of felons
+ri_vt_after <- ri_vt %>%
+  filter(Year > 2006)
+summary(ri_vt_after)
+ri_vt_before_nrow
+ri_vt_after_sd <- sd(ri_vt_after$Voted)
+ri_vt_after_mean <- sd(ri_vt_after$Voted)
+#attempt to set up a t-test to compare the means of before and after enfranchisement
+ri_vt_before_t_test <- c(rnorm(ri_vt_before_nrow, mean = ri_vt_before_mean, sd = ri_vt_before_sd))
+ri_vt_after_t_test <- c(rnorm(ri_vt_before_nrow, mean = ri_vt_after_mean, sd = ri_vt_after_sd))
+
+#running t.test
+t.test(ri_vt_before_t_test, ri_vt_after_t_test, var.equal = TRUE)
+```
+
+#Loading Voter Turnout Data on Maryland
+##Note: The election chosen to represent voter turnout 
+```{r}
+#ml = Maryland
+#vt = Voter Turnout
+ml_vt_2010 <- read.csv(here('Voter Turnout','Raw Data','State_Legislative_Districts_2010_General.csv'))
+ml_vt_2012 <- read.csv(here('Voter Turnout','Raw Data','State_Legislative_Districts_2012_General.csv'))
+ml_vt_2014 <- read.csv(here('Voter Turnout','Raw Data','State_Legislative_Districts_2014_General.csv'))
+ml_vt_2016 <- read.csv(here('Voter Turnout','Raw Data','State_Legislative_Districts_2016_General.csv'))
+ml_vt_2018 <- read.csv(here('Voter Turnout','Raw Data','State_Legislative_Districts_2018_General.csv'))
+
+#This is used to figure out how many people voted in each US Representative Election
+ml_vt_2010[is.na(ml_vt_2010)] = 0
+ml_vt_2010 <- ml_vt_2010 %>%
+  filter(Office.Name == 'U.S. Congress') %>%
+  select(starts_with("LEGS.")) %>%
+  colSums()
+sum(ml_vt_2010)
+
+ml_vt_2012[is.na(ml_vt_2012)] = 0
+ml_vt_2012 <- ml_vt_2012 %>%
+  filter(Office.Name == 'Rep in Congress') %>%
+  select(starts_with("LEGS.")) %>%
+  colSums()
+sum(ml_vt_2012)
+
+ml_vt_2014[is.na(ml_vt_2014)] = 0
+ml_vt_2014 <- ml_vt_2014 %>%
+  filter(Office.Name == 'Rep in Congress') %>%
+  select(starts_with("LEGS.")) %>%
+  colSums()
+sum(ml_vt_2014)
+
+ml_vt_2016[is.na(ml_vt_2016)] = 0
+ml_vt_2016 <- ml_vt_2016 %>%
+  filter(Office.Name == 'Rep in Congress') %>%
+  select(starts_with("LEGS.")) %>%
+  colSums()
+sum(ml_vt_2016)
+
+ml_vt_2018[is.na(ml_vt_2018)] = 0
+ml_vt_2018 <- ml_vt_2018 %>%
+  filter(Office.Name == 'Representative in Congress') %>%
+  select(starts_with("LEGS.")) %>%
+  colSums()
+sum(ml_vt_2018)
+
+#Intermediate variables for the creation of a data frame containing voter turnout for Maryland
+election_year <- c(2010,2012,2014,2016,2018)
+voter_turnout <- c(1495038,1971476,1321753,1624753,1471219)
+#Creation of data frame containing voter turnout information for Maryland
+ml_vt_all <- data.frame(election_year, voter_turnout)
+
+```
+
+#Graphing results from Maryland voter Turnout
+```{r}
+ggplot(ml_vt_all, aes(x = election_year, y = voter_turnout)) +
+  geom_line() +
+  theme_light() +
+  geom_vline(aes(xintercept = 2016), color = 'yellow') +
+  geom_vline(aes(xintercept = 2018), color = 'green') +
+  labs(x = 'Election Year', y = 'Voter Turnout', title = 'Voter Turnout Before and After Parolee Enfranchisement', subtitle = 'Data obtained from Maryland State Board of Elections')
+#The year that the law enfranchising parolees is shown with the yellow vertical line
+#The election year that parolees could first vote in is marked in green
+
+```
+
+#Plotting a histogram representing the average voter turnout before and after parolee enfranchisement in states that have data
+```{r}
+ggplot()
+```
+
