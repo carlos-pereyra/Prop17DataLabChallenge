@@ -47,6 +47,7 @@ dfLoc = pd.read_csv("docs/data/longlat.csv")
 
 df2 = pd.merge(dfPar, dfLoc, on='County', how='outer').dropna()
 
+## graph objects
 choro = go.Choroplethmapbox(z=np.array(df["color"]),
                             geojson=counties,
                             locations=df.fips.tolist(),
@@ -57,21 +58,7 @@ site_lon = df2.Long
 locations_name = df2.County
 
 scatt = go.Scattermapbox(lat=site_lat, lon=site_lon, 
-                         marker=dict( size=df2.parolees.tolist()/df2.parolees.max()*60, color ='green'), opacity=0.9)
-'''
-fig.add_trace(go.Scattermapbox(
-        lat=site_lat,
-        lon=site_lon,
-        mode='markers',
-        marker=go.scattermapbox.Marker(
-            size=17,
-            color='rgb(255, 0, 0)',
-            opacity=0.7
-        ),
-        text=locations_name,
-        hoverinfo='text'
-    ))
-'''
+                         marker=dict( size=df2.parolees.tolist()/df2.parolees.max()*60, color ='pink'), opacity=0.9)
 
 layout = go.Layout(margin={"r":0,"t":0,"l":0,"b":0},
                     mapbox=dict(
@@ -87,3 +74,5 @@ fig=go.Figure(data=[choro, scatt], layout =layout)
 #fig.update_geos(fitbounds="locations", visible=False)
 
 fig.show()
+
+fig.write_html("parolees_vs_partisan_counties.html")
