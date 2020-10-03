@@ -14,7 +14,7 @@ with urlopen('https://raw.githubusercontent.com/plotly/datasets/master/geojson-c
 dfFips = pd.read_csv("https://raw.githubusercontent.com/plotly/datasets/master/fips-unemp-16.csv",
                    dtype={"fips": str})
 
-dfVoter = pd.read_csv("docs/data/voterreg18.csv")
+dfVoter = pd.read_csv("../../docs/data/voterreg18.csv")
 dfVoter = dfVoter[dfVoter.notna()]
 # convert str to float
 dfVoter["Democratic"] = dfVoter["Democratic"].apply(pd.to_numeric, args=('coerce',))
@@ -33,17 +33,17 @@ dfVoter["MajorityParty"] = dfDummy.idxmax(axis=1) # party-name column
 
 dfVoter['color'] = np.where(dfVoter['DemocracticP']>dfVoter['RepublicanP'], 1*dfVoter['DemocracticP'], -1*dfVoter['RepublicanP'])
 
-dfCCodes = pd.read_csv("docs/data/countyfips.csv", dtype={"fips": str})
+dfCCodes = pd.read_csv("../../docs/data/countyfips.csv", dtype={"fips": str})
 dfCCodes = dfCCodes[dfCCodes.notna()]
 
 dfDummy = pd.merge(dfVoter, dfCCodes, on='County', how='outer').dropna()
 df = pd.merge(dfDummy, dfFips, on='fips', how='outer').dropna()
 
 ## major parolee data
-dfPar = pd.read_csv("docs/data/parolee_counties_18.csv", dtype={"fips": str})
+dfPar = pd.read_csv("../../docs/data/parolee_counties_18.csv", dtype={"fips": str})
 dfPar = dfPar[dfPar.notna()]
 
-dfLoc = pd.read_csv("docs/data/longlat.csv")
+dfLoc = pd.read_csv("../../docs/data/longlat.csv")
 
 df2 = pd.merge(dfPar, dfLoc, on='County', how='outer').dropna()
 
@@ -70,5 +70,5 @@ layout = go.Layout(margin={"r":0,"t":0,"l":0,"b":0},
                         style='dark'))
 
 fig=go.Figure(data=[choro, scatt], layout =layout)
-fig.write_html("parolees_vs_partisan_counties.html")
+fig.write_html("../../docs/html/parolees_vs_partisan_counties.html")
 fig.show()
