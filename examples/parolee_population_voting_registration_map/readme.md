@@ -1,4 +1,4 @@
-0. Install Dependencies
+# 1. Install Dependencies
 One of the easiest package installers to use is [Miniconda](https://docs.conda.io/en/latest/miniconda.html). I'd recommend using it
 to install the dependencies that are mentioned below.
 ````
@@ -24,12 +24,12 @@ Benefits of plotly
 * scatter mapbox plots
 * choropeth maps
 
-1. How to run this example
-This example uses python and all the dependencies above.
+# 2. Execute example
+How to run this example. This example uses python and all the dependencies above.
 
 ````
 python ParolePartisanMap.py
 ````
 
-2. Output
+# 3. Output
 
