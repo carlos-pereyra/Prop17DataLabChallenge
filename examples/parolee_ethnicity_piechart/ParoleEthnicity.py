@@ -13,5 +13,5 @@ print(df)
 
 # plot distribution on pie chart
 fig = px.pie(df, values='eth_perc', names='ethnicity', color_discrete_sequence=px.colors.sequential.RdBu)
-fig.write_html("parole_ethnicity.html")
+fig.write_html("../../docs/html/parole_ethnicity.html")
 fig.show()

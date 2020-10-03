@@ -28,7 +28,7 @@ Benefits of plotly
 How to run this example. This example uses python and all the dependencies above.
 
 ````
-python ParolePartisanMap.py
+python ParoleAgentCaseload.py
 ````
 
 # 3. Output
@@ -37,6 +37,6 @@ Additionally plotly will automatically forward you to the visual on your web-bro
 
 The new html file for usage on websites can be found the directory below:
 ```
-/docs/html/parolees_vs_partisan_counties.html
+/docs/html/parole_agent_caseload.html
 ```
 
