@@ -69,10 +69,6 @@ layout = go.Layout(margin={"r":0,"t":0,"l":0,"b":0},
                         zoom=5.5,
                         style='dark'))
 
-#print(list(df))
 fig=go.Figure(data=[choro, scatt], layout =layout)
-#fig.update_geos(fitbounds="locations", visible=False)
-
-fig.show()
-
 fig.write_html("parolees_vs_partisan_counties.html")
+fig.show()
