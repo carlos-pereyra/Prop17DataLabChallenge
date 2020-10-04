@@ -29,7 +29,7 @@ conda install pandas
 ````
 (2). plotly
 ````
-$ conda install -c plotly plotly=4.11.0
+ conda install -c plotly plotly=4.11.0
 ````
 or
 ````
