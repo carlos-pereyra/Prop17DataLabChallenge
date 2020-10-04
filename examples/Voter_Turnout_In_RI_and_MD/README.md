@@ -1,4 +1,4 @@
-## To run the code the programming language R must be installed, it is also recommended that you download the IDE R Studio as it's easier to use
+### To run the code the programming language R must be installed, it is also recommended that you download the IDE R Studio as it's easier to use
 ### In an R script use the install.packages() function included in base R to install the necessary packages
 ```{r}
 install.packages('ggplot2')
