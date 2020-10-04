@@ -13,4 +13,4 @@ install.packages('tidyverse')
 install.packages('here')
 ```
 ### Once packages are installed import the "Voter Turnout Raw Data" subfolder in the "Data" folder. Note: the "Voter Turnout Raw Data" folder must be located within another folder titled "Voter Turnout" for the .csv files to be located and read by the code
-### After .csv files have been imported, import the R markdown file voter_turnout.Rmd into the "Voter Turnout" Folder, open it in R or R Studio, and run all code
+### After .csv files have been imported, import the R markdown file voter_turnout.Rmd into the "Voter Turnout" Folder, open it in R or R Studio and run all code
