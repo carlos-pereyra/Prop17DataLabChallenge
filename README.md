@@ -20,21 +20,23 @@ Description of approach
 ### Directory Manifest
 
 *  Folders:
-	* folder name - description of contents.
-* folder name - description of contents.
+	* /docs - contains image, html, and data directories.		
+	* /examples - contain example scripts for data analysis
 
 * Files:
 	*  filename - description of contents and dependencies. What does     this file represent, and how does it fit in the workflow?
-  ### California major parole populations and county partisanship
-  ![mapping](docs/img/partisan_parole_map.png)
-
-*  filename - description of contents and dependencies.
-  ### Support for Prop 17 via Youtube Crawl
-  ![mapping](docs/img/support_analysis.png)
+	* /docs/img - stores images
+	* /docs/html - stores html instructions for website rendering
+	* /docs/data - stores datasets used in our codes
+	
+	* /example/parolee_population_voting_registration_map - plots parolee population by county
+	* /example/parolee_age
+	* /example/parolee...
 
 ### Personnel/Contributors
 
 * full names and contact information of all persons involved in the project and their role.
+* Carlos Pereyra - twitter: AvocadoOnAToast
 
 
 ### Project URLs - (for example: to data sources you used for the project)
