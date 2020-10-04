@@ -66,7 +66,7 @@ layout = go.Layout(margin={"r":0,"t":0,"l":0,"b":0},
                         bearing=0,
                         center=dict(lat=37.6017,lon=-121.7195),
                         pitch=0,
-                        zoom=5.5,
+                        zoom=4.5,
                         style='dark'))
 
 fig=go.Figure(data=[choro, scatt], layout =layout)
