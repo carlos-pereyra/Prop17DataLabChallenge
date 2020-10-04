@@ -1,0 +1,108 @@
+---
+title: "Voter Turnout Before and After Parolee Enfranchisement"
+author: "Evan Roybal"
+date: "9/28/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+#loading packages contained in tidyverse
+```{r}
+library('dplyr')
+library('tidyr')
+library('ggplot2')
+library('readr')
+library('here')
+```
+
+#reading in Rhode Island .csv containing election turnout data
+```{r}
+# ri = Rhode Island
+# vt = voter turnout
+ri_vt <- read.csv(here('Voter Turnout', 'Raw Data', 'history-of-voter-turnout.csv'))
+ri_vt <- rename(ri_vt, Year = ï..Category)
+```
+
+#Graphing of ri_vt
+```{r}
+ri_vt_graph_test <- ggplot(data = ri_vt, aes(x = Year, y = Voted)) +
+  geom_point() +
+  geom_smooth() +
+  geom_vline(aes(xintercept = 2006), color = "yellow") +
+  geom_vline(aes(xintercept = 2007), color = "green") +
+  theme_light() +
+  labs(y = "# of Votes", x = "Election Year", title = "Voter Turnout in Rhode Island", subtitle = "Data from Rhode Island Department of State")
+ri_vt_graph_test
+ggsave(here('Voter Turnout', 'Plots', 'RI_Voter_Turnout.png'))
+```
+
+#Loading Voter Turnout Data on Maryland
+##Note: Data on voter turnout for the U.S. Representative Elections as it existed in every data frame
+```{r}
+#ml = Maryland
+#vt = Voter Turnout
+ml_vt_2010 <- read.csv(here('Voter Turnout','Raw Data','State_Legislative_Districts_2010_General.csv'))
+ml_vt_2012 <- read.csv(here('Voter Turnout','Raw Data','State_Legislative_Districts_2012_General.csv'))
+ml_vt_2014 <- read.csv(here('Voter Turnout','Raw Data','State_Legislative_Districts_2014_General.csv'))
+ml_vt_2016 <- read.csv(here('Voter Turnout','Raw Data','State_Legislative_Districts_2016_General.csv'))
+ml_vt_2018 <- read.csv(here('Voter Turnout','Raw Data','State_Legislative_Districts_2018_General.csv'))
+
+#This is used to figure out how many people voted in each US Representative Election each year
+ml_vt_2010[is.na(ml_vt_2010)] = 0
+ml_vt_2010 <- ml_vt_2010 %>%
+  filter(Office.Name == 'U.S. Congress') %>%
+  select(starts_with("LEGS.")) %>%
+  colSums()
+sum(ml_vt_2010)
+
+ml_vt_2012[is.na(ml_vt_2012)] = 0
+ml_vt_2012 <- ml_vt_2012 %>%
+  filter(Office.Name == 'Rep in Congress') %>%
+  select(starts_with("LEGS.")) %>%
+  colSums()
+sum(ml_vt_2012)
+
+ml_vt_2014[is.na(ml_vt_2014)] = 0
+ml_vt_2014 <- ml_vt_2014 %>%
+  filter(Office.Name == 'Rep in Congress') %>%
+  select(starts_with("LEGS.")) %>%
+  colSums()
+sum(ml_vt_2014)
+
+ml_vt_2016[is.na(ml_vt_2016)] = 0
+ml_vt_2016 <- ml_vt_2016 %>%
+  filter(Office.Name == 'Rep in Congress') %>%
+  select(starts_with("LEGS.")) %>%
+  colSums()
+sum(ml_vt_2016)
+
+ml_vt_2018[is.na(ml_vt_2018)] = 0
+ml_vt_2018 <- ml_vt_2018 %>%
+  filter(Office.Name == 'Representative in Congress') %>%
+  select(starts_with("LEGS.")) %>%
+  colSums()
+sum(ml_vt_2018)
+
+#Creation of data frame containing voter turnout information for Maryland
+election_year <- c(2010,2012,2014,2016,2018)
+voter_turnout <- c(1495038,1971476,1321753,1624753,1471219)
+ml_vt_all <- data.frame(election_year, voter_turnout)
+
+```
+
+#Graphing results from Maryland voter Turnout
+```{r}
+ggplot(ml_vt_all, aes(x = election_year, y = voter_turnout)) +
+  geom_point() +
+  geom_smooth() +
+  theme_light() +
+  geom_vline(aes(xintercept = 2016), color = 'yellow') +
+  geom_vline(aes(xintercept = 2018), color = 'green') +
+  labs(x = 'Election Year', y = 'Voter Turnout', title = 'Voter Turnout Before and After Parolee Enfranchisement', subtitle = 'Data obtained from Maryland State Board of Elections')
+#The year that the law enfranchising parolees is shown with the yellow vertical line
+#The election year that parolees could first vote in is marked in green
+ggsave(here('Voter Turnout', 'Plots', 'MD_Voter_Turnout.png'))
+```
