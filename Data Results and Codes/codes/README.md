@@ -20,7 +20,7 @@ After you install python and packages above,you also need to download the data f
 which are also included in `Data and Results and Codes`.
 
 
-Remark:I recommand [Anaconda](http://anaconda.com/downloads.html) to install `jupyter Notebook` for my codes,because if there may be some problems during installing the packages,then you could use Anaconda Prompt
+# Remark:I recommand [Anaconda](http://anaconda.com/downloads.html) to install `jupyter Notebook` for my codes,because if there may be some problems during installing the packages,then you could use Anaconda Prompt
 to install them.For the packages,the commands are:<br>
 (1). pandas
 ````
