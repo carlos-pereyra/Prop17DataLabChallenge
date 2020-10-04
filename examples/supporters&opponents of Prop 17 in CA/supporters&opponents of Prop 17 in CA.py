@@ -25,7 +25,7 @@ trace_2=go.Bar(
     x=['2016','2017','2018','2019','2020'],
     y=list(opp.loc['sum of year']),
     name='opponent')
-trace_=[trrace_1,trrace_2]
+trace_=[trace_1,trace_2]
 layout=go.Layout(title='supporters & opponents of Prop 17 from 2016 to 2020')
 figure=go.Figure(data=trace_,layout=layout)
 sumplot(figure,filename='s&o of Prop 17.html')
