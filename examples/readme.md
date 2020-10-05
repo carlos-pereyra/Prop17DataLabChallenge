@@ -25,4 +25,4 @@
 
 ## Ratio and absolute number of parolees changes
 * see /ratio and absolute number of parolees in CA (directory)
-![plot](../docs/img/ratio and absolute number of parolees in CA.png)
+![](../docs/img/ratio%20and%20absolute%20number%20of%20parolees%20in%20CA.png)
