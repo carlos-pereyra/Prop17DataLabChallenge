@@ -78,7 +78,8 @@ This repository contains example scripts for presenting prop 17 related illustra
 * Maryland Voter Turnout Data: https://elections.maryland.gov/elections/2010/index.html 
 * Rhode Island Parolee Enfranchisement Date: http://opendoorsri.org/righttovote 
 * Maryland Parolee Enfranchisement Date: https://www.ncsl.org/research/elections-and-campaigns/felon-voting-rights.aspx 
-*
+* California Department of Corrections and Rehabilitation: https://www.cdcr.ca.gov/research/offender-outcomes-characteristics/offender-data-points/
+* California voter registration: https://www.sos.ca.gov/elections/report-registration/15-day-gen-2018
 
 ### Project Repositories
 
