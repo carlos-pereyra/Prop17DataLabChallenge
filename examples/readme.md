@@ -22,3 +22,7 @@
 ## Estimate of prop 17 support form Youtube API
 * see /supporters&opponents of Prop 17 in CA (directory) 
 ![](../docs/img/support_analysis.png)
+
+## Ratio and absolute number of parolees changes
+* see /ratio and absolute number of parolees changes(directory)
+![](../docs/img/
