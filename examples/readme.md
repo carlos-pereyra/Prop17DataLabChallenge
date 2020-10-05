@@ -24,5 +24,5 @@
 ![](../docs/img/support_analysis.png)
 
 ## Ratio and absolute number of parolees changes
-* see /ratio and absolute number of parolees changes(directory)
+* see /ratio and absolute number of parolees in CA(directory)
 ![](../docs/img/ratio and absolute number of parolees in CA.png)
