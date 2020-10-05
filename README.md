@@ -29,11 +29,11 @@ This repository contains example scripts for presenting prop 17 related illustra
 
 *  Folders:
 
-	**Parent Folders**
+	Parent Folders
 	* /docs - contains image, html, and data directories.		
 	* /examples - contain example scripts for data analysis
 	
-	**Sub Folders**
+	Sub Folders
 	* /docs/img - stores images
 	* /docs/html - stores html instructions for website rendering
 	* /docs/data - stores datasets used in our codes
