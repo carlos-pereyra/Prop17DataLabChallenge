@@ -12,3 +12,7 @@
 
 ## /supporters&opponents of Prop 17 in CA
 ![](../docs/img/support_analysis.png)
+
+## /Voter_Turnout_In_RI_and_MD
+![](../docs/img/RI_Voter_Turnout.png)
+![](../docs/img/MD_Voter_Turnout.png)
