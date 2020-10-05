@@ -1,18 +1,18 @@
-## /parolee_population_voting_registration_map**
-![](../docs/img/partisan_parole_map.png) 
+## see /parolee_population_voting_registration_map (directory) 
+![](../docs/img/partisan_parole_map.png)
 
-## /parolee_age_piechart
+## see /parolee_age_piechart (directory) 
 ![map_plot](../docs/img/age.png)
 
-## /parolee_agent_caseload_piechart
+## see /parolee_agent_caseload_piechart (directory) 
 | ![map_plot](../docs/img/agent_caseload.png)
 
-## /parolee_ethnicity_piechart
+## see /parolee_ethnicity_piechart (directory) 
 ![map_plot](../docs/img/ethnicity.png)
 
-## /supporters&opponents of Prop 17 in CA
-![](../docs/img/support_analysis.png)
-
-## /Voter_Turnout_In_RI_and_MD
+## see /Voter_Turnout_In_RI_and_MD (directory) 
 ![](../docs/img/RI_Voter_Turnout.png)
 ![](../docs/img/MD_Voter_Turnout.png)
+
+## see /supporters&opponents of Prop 17 in CA (directory) 
+![](../docs/img/support_analysis.png)
