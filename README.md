@@ -82,7 +82,7 @@ This repository contains example scripts for presenting prop 17 related illustra
 ### Personnel/Contributors
 * Carlos Pereyra(lead) - twitter: AvocadoOnAToast
 * Evan Roybal(lead) - email: earoybal@ucdavis.edu
-* Chenze Li(lead) - email:czeli@ucdavis.edu
+* Chenze Li(lead) - email: czeli@ucdavis.edu
 
 ### Project URLs - (for example: to data sources you used for the project)
 * Rhode Island Voter Turnout Data: https://vote.sos.ri.gov/DataInformation/VoterTurnout 
