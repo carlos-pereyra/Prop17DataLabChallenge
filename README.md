@@ -46,12 +46,26 @@ This repository contains example scripts for presenting prop 17 related illustra
 	* /example/Voter_Turnout_in_RI_and_MD - subfolder that stores readme and voter_turnout.Rmd files
 
 * Files:
-	* /examples/parolee_population_voting_registration_map/ParolePartisanMap.py **(plot parole population and county partisanship on map)**
+	* /examples/parolee_population_voting_registration_map/ParolePartisanMap.py 
+		* plot parole population and county partisanship on map
+		* returns html plot to /docs/html
+		* automatically opens plot in default browser
 	* /examples/parolee_age_piechart/ParoleAge.py
+		* plot pie chart of parole demographic age distribution
+		* write html plot to /docs/html
+		* automatically opens plot in default browser
 	* /examples/parolee_agent_caseload_piechart/ParoleAgentCaseload.py
+		* plot parole agent caseload distribution
+		* write html plot to /docs/html
+		* automatically opens plot in default browser
 	* /examples/parolee_ethnicity_piechart/ParoleEthnicity.py
-	* /example/Voter_Turnout_in_RI_and_MD/README.md - markdown file explaining how to load and run voter_turnout.Rmd
-	* /example/Voter_Turnout_in_RI_and_MD/voter_turnout.Rmd - R markdown file containing code that was used to work with and visualize voter turnout data
+		* plot ethnicity distribution
+		* write html plot to /docs/html
+		* automatically opens plot in default browser
+	* /example/Voter_Turnout_in_RI_and_MD/README.md 
+		* markdown file explaining how to load and run voter_turnout.Rmd
+	* /example/Voter_Turnout_in_RI_and_MD/voter_turnout.Rmd 
+		* R markdown file containing code that was used to work with and visualize voter turnout data
 	* /examples/ratio and absolute number of parolees in CA/ratio and absolute number of parolees in CA.py
 
 ### Personnel/Contributors
