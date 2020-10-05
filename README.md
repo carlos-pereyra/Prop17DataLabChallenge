@@ -44,6 +44,10 @@ This repository contains example scripts for presenting prop 17 related illustra
 	* /example/parolee_agent_caseload_piechart - parolee agent caseload demographic pie chart directory
 	* /example/parolee_ethnicity_piechart - parolee ethnicity demographic pie chart directory
 	* /example/Voter_Turnout_in_RI_and_MD - subfolder that stores readme and voter_turnout.Rmd files
+	* /example/opponents of Prop 17 - the number of opponents by month directory
+	* /example/ratio and absolute number of parolees in CA - ratio and absolute number of parolees by year directory
+	* /example/supporters of Prop 17 - the number of supporters by month directory
+	* /example/supporters&opponents of Prop 17 in CA - compare of supporters and opponents
 
 * Files:
 	* /examples/parolee_population_voting_registration_map/ParolePartisanMap.py 
@@ -62,16 +66,23 @@ This repository contains example scripts for presenting prop 17 related illustra
 		* plot ethnicity distribution
 		* write html plot to /docs/html
 		* automatically opens plot in default browser
-	* /example/Voter_Turnout_in_RI_and_MD/README.md 
+	* /examples/Voter_Turnout_in_RI_and_MD/README.md 
 		* markdown file explaining how to load and run voter_turnout.Rmd
-	* /example/Voter_Turnout_in_RI_and_MD/voter_turnout.Rmd 
+	* /examplse/Voter_Turnout_in_RI_and_MD/voter_turnout.Rmd 
 		* R markdown file containing code that was used to work with and visualize voter turnout data
 	* /examples/ratio and absolute number of parolees in CA/ratio and absolute number of parolees in CA.py
+		* python codes used to visualize ratio and absolute number of parolees
+	* /examples/opponents of Prop 17/opponents of Prop 17.py
+		* python codes used to make plots about opponents by month
+	* /examples/supporters of Prop 17/supporters of Prop 17.py
+		* python codes used to make plots about supporters by month
+	* /examples/supporters&opponents of Prop 17 in CA/supporters&opponents of Prop 17 in CA.py 
+		* python codes used to make compare about supporters and opponents in CA
 
 ### Personnel/Contributors
 * Carlos Pereyra(lead) - twitter: AvocadoOnAToast
 * Evan Roybal(lead) - email: earoybal@ucdavis.edu
-* Chenze Li(lead)
+* Chenze Li(lead) - email: czeli@ucdavis.edu
 
 ### Project URLs - (for example: to data sources you used for the project)
 * Rhode Island Voter Turnout Data: https://vote.sos.ri.gov/DataInformation/VoterTurnout 
@@ -80,7 +91,7 @@ This repository contains example scripts for presenting prop 17 related illustra
 * Maryland Parolee Enfranchisement Date: https://www.ncsl.org/research/elections-and-campaigns/felon-voting-rights.aspx 
 * California Department of Corrections and Rehabilitation: https://www.cdcr.ca.gov/research/offender-outcomes-characteristics/offender-data-points/
 * California voter registration: https://www.sos.ca.gov/elections/report-registration/15-day-gen-2018
-
+* Bureau of Justice Statistics: https://www.bjs.gov/parole/
 ### Project Repositories
 
 * Main Repository: https://github.com/carlos-pereyra/Prop17DataLabChallenge
