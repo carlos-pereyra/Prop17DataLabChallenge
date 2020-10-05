@@ -22,6 +22,7 @@ Description of approach
 *  Folders:
 	* /docs - contains image, html, and data directories.		
 	* /examples - contain example scripts for data analysis
+	
 
 * Files:
 	*  filename - description of contents and dependencies. What does     this file represent, and how does it fit in the workflow?
@@ -32,17 +33,24 @@ Description of approach
 	* /example/parolee_population_voting_registration_map - plots parolee population by county
 	* /example/parolee_age
 	* /example/parolee...
+	* /example/Voter_Turnout_in_RI_and_MD - stores readme and voter_turnout.Rmd files
+	* /example/Voter_Turnout_in_RI_and_MD/README.md - markdown file explaining how to load and run voter_turnout.Rmd
+	* /example/Voter_Turnout_in_RI_and_MD/voter_turnout.Rmd - R markdown file containing code that was used to work with and visualize voter turnout data
+	* /docs/data/Voter Turnout Raw Data - stores .csv files used in voter_turnout.Rmd
 
 ### Personnel/Contributors
 
 * full names and contact information of all persons involved in the project and their role.
 * Carlos Pereyra - twitter: AvocadoOnAToast
+* Evan Roybal - email: earoybal@ucdavis.edu
 
 
 ### Project URLs - (for example: to data sources you used for the project)
 
-* http://
-* http://
+* Rhode Island Voter Turnout Data: https://vote.sos.ri.gov/DataInformation/VoterTurnout 
+* Maryland Voter Turnout Data: https://elections.maryland.gov/elections/2010/index.html 
+* Rhode Island Parolee Enfranchisement Date: http://opendoorsri.org/righttovote 
+* Maryland Parolee Enfranchisement Date: https://www.ncsl.org/research/elections-and-campaigns/felon-voting-rights.aspx 
 
 ### Project Repositories
 
