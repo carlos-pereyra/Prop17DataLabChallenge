@@ -22,6 +22,8 @@ Description of approach
 *  Folders:
 	* /docs - contains image, html, and data directories.		
 	* /examples - contain example scripts for data analysis
+	* /example/Voter_Turnout_in_RI_and_MD - subfolder that stores readme and voter_turnout.Rmd files
+	* /docs/data/Voter Turnout Raw Data - subfolder that stores .csv files used in voter_turnout.Rmd
 	
 
 * Files:
@@ -33,10 +35,8 @@ Description of approach
 	* /example/parolee_population_voting_registration_map - plots parolee population by county
 	* /example/parolee_age
 	* /example/parolee...
-	* /example/Voter_Turnout_in_RI_and_MD - stores readme and voter_turnout.Rmd files
 	* /example/Voter_Turnout_in_RI_and_MD/README.md - markdown file explaining how to load and run voter_turnout.Rmd
 	* /example/Voter_Turnout_in_RI_and_MD/voter_turnout.Rmd - R markdown file containing code that was used to work with and visualize voter turnout data
-	* /docs/data/Voter Turnout Raw Data - stores .csv files used in voter_turnout.Rmd
 
 ### Personnel/Contributors
 
