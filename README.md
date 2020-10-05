@@ -71,7 +71,7 @@ This repository contains example scripts for presenting prop 17 related illustra
 	* /examplse/Voter_Turnout_in_RI_and_MD/voter_turnout.Rmd 
 		* R markdown file containing code that was used to work with and visualize voter turnout data
 	* /examples/ratio and absolute number of parolees in CA/ratio and absolute number of parolees in CA.py
-	        * python codes used to visualize ratio and absolute number of parolees
+	        *python codes used to visualize ratio and absolute number of parolees
 	* /example/opponents of Prop 17/opponents of Prop 17.py
 	        * python codes used to make plots about opponents by month
 	* /example/supporters of Prop 17/supporters of Prop 17.py
